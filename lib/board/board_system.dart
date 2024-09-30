@@ -117,7 +117,7 @@ int checkDiagonalB(int row, int col) {
 // 웹이나 테블릿에서 바둑판의 크기를 조절하기 위한 함수
 // 작은쪽을 기준으로 높이 너비가 정해짐
 Size getSize(Size size, double toolbar) {
-  if (size.height > size.width) {
+  if (size.height - toolbar > size.width) {
     return Size(size.width, size.width);
   } else {
     return Size(size.height - toolbar, size.height - toolbar);

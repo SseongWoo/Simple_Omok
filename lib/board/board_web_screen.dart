@@ -54,8 +54,8 @@ class _BoardWebScreenState extends State<BoardWebScreen> {
           height: size.height - 1, // 사이즈를 -1을 안할경우 오른쪽에 슬라이드바가 생성됨
           width: size.width - 1,
           constraints: const BoxConstraints(
-            maxHeight: 800, // 최대 높이 제한
-            maxWidth: 800, // 최대 너비 제한
+            maxHeight: 700, // 최대 높이 제한
+            maxWidth: 700, // 최대 너비 제한
             minHeight: 300, // 최소 높이 제한
             minWidth: 300, // 최소 너비 제한
           ),
@@ -88,8 +88,9 @@ class _BoardWebScreenState extends State<BoardWebScreen> {
                       }
                       if (checkBoard(row, col)) {
                         _win();
+                      } else {
+                        _blackTurn = !_blackTurn;
                       }
-                      _blackTurn = !_blackTurn;
                     }
                   });
                 },

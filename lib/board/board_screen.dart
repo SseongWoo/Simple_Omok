@@ -164,8 +164,9 @@ class _BoardScreenState extends State<BoardScreen> {
                         }
                         if (checkBoard(row, col)) {
                           _win();
+                        } else {
+                          _blackTurn = !_blackTurn;
                         }
-                        _blackTurn = !_blackTurn;
                       }
                     });
                   },
